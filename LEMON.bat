@@ -16,7 +16,7 @@ exit
 ECHO FOUND %cd%
 IF exist "nml_libs" ( echo Previous NML Lib folder detected) else ( mkdir "nml_libs" && echo Generating NML Library folder)
 cd "nml_libs"
-bitsadmin /transfer Harmony "https://github.com/neos-modding-group/NeosModLoader/releases/download/1.9.1/0Harmony.dll" "%cd%/0harmony"
+bitsadmin /transfer Harmony "https://github.com/neos-modding-group/NeosModLoader/releases/download/1.9.1/0Harmony.dll" "%cd%/0harmony.dll"
 cd ../Libraries/
 bitsadmin /transfer NML "https://github.com/neos-modding-group/NeosModLoader/releases/latest/download/NeosModLoader.dll" "%cd%/NeosModLoader.dll"
 ECHO Mod Loader and Harmony installed
@@ -27,6 +27,7 @@ exit
 
 exit
 :Shortcut
+cd ..
 echo Set oWS = WScript.CreateObject("WScript.Shell") > CreateShortcut.vbs
 echo sLinkFile = "%HOMEDRIVE%%HOMEPATH%\Desktop\Modded Neos.lnk" >> CreateShortcut.vbs
 echo Set oLink = oWS.CreateShortcut(sLinkFile) >> CreateShortcut.vbs
