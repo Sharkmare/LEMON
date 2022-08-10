@@ -5,3 +5,12 @@ LIME is an assistant tool for LEMON, it essentially ensures your LEMON script is
 LIME should nto require any updates and always point at this repo
 
 Alternatively you can manually downlaod NeosModloader [HERE](https://github.com/neos-modding-group/NeosModLoader)
+
+
+## Usage:
+
+> Download either LEMON.bat or LIME.bat
+
+> Either Execute the file or first put it into your neos install directory and then execute it for best results
+
+> Neos Mod loader will be installed an a modded shortcut created on your desktop to launch neos in modded mode
