@@ -14,3 +14,7 @@ Alternatively you can manually downlaod NeosModloader [HERE](https://github.com/
 > Either Execute the file or first put it into your neos install directory and then execute it for best results
 
 > Neos Mod loader will be installed an a modded shortcut created on your desktop to launch neos in modded mode
+
+## Capabilities:
+
+Currently LEMON can dowload all NeosModLoader dependencies and automatically install them as well as generate a shortcut to launch neos in modded mode on your desktop
