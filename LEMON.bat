@@ -3,7 +3,7 @@ TITLE Lemon
 ::code to detect Neos dir, ask for dir if not detected ||| Step 1 done. Write user prompt later :DIRprompt
 ::mkdir to generate required NML_lib director if no present || Done
 ::Downlod latest DLLs for both 0harmony and NML.dll ||| Done
-::Generate a batch file to execute modded Neos
+::Generate a batch file to execute modded Neos ||| substituted for a real shortcut
 IF exist "Neos.exe" ( GOTO :Detected)
 ::If Neos is in our current directory, we do not need to search further
 IF exist "C:\Neos\" ( cd "C:\Neos\" && GOTO :Detected)
@@ -20,6 +20,19 @@ bitsadmin /transfer Harmony "https://github.com/neos-modding-group/NeosModLoader
 cd ../Libraries/
 bitsadmin /transfer NML "https://github.com/neos-modding-group/NeosModLoader/releases/latest/download/NeosModLoader.dll" "%cd%/NeosModLoader.dll"
 ECHO Mod Loader and Harmony installed
+IF NOT exist "%HOMEDRIVE%%HOMEPATH%\Desktop\Modded Neos.lnk" ( GOTO :Shortcut)
 pause
-
+exit
 :DIRprompt
+
+exit
+:Shortcut
+echo Set oWS = WScript.CreateObject("WScript.Shell") > CreateShortcut.vbs
+echo sLinkFile = "%HOMEDRIVE%%HOMEPATH%\Desktop\Modded Neos.lnk" >> CreateShortcut.vbs
+echo Set oLink = oWS.CreateShortcut(sLinkFile) >> CreateShortcut.vbs
+echo oLink.TargetPath = "%cd%/NEOS.exe -LoadAssembly Libraries\NeosModLoader.dll" >> CreateShortcut.vbs
+echo oLink.Save >> CreateShortcut.vbs
+cscript CreateShortcut.vbs
+ECHO Shortcut at Desktop generated.
+pause
+del CreateShortcut.vbs
