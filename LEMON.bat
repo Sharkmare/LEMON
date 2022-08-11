@@ -33,7 +33,7 @@ echo sLinkFile = "%HOMEDRIVE%%HOMEPATH%\Desktop\Modded Neos.lnk" >> CreateShortc
 echo Set oLink = oWS.CreateShortcut(sLinkFile) >> CreateShortcut.vbs
 echo oLink.TargetPath = ("%cd%/NEOS.exe") >> CreateShortcut.vbs
 echo oLink.Arguments = "-LoadAssembly Libraries\NeosModLoader.dll" >> CreateShortcut.vbs
-echo oLink.WorkingDirectory = %cd% >> CreateShortcut.vbs
+echo oLink.WorkingDirectory = "%cd%" >> CreateShortcut.vbs
 echo oLink.Save >> CreateShortcut.vbs
 cscript CreateShortcut.vbs
 ECHO Shortcut at Desktop generated.
