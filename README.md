@@ -13,7 +13,7 @@ Alternatively you can manually downlaod NeosModloader [HERE](https://github.com/
 
 > Either Execute the file or first put it into your neos install directory and then execute it for best results
 
-> Neos Mod loader will be installed an a modded shortcut created on your desktop to launch neos in modded mode [To be fixed]
+> Neos Mod loader will be installed an a modded shortcut created on your desktop to launch neos in modded mode
 
 ## Capabilities:
 
